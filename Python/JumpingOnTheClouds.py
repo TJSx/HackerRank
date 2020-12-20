@@ -22,12 +22,12 @@ if they are safe or 1 if they must be avoided.
 
 # Complete the jumpingOnClouds function below.
 def jumpingOnClouds(c):
-    length = len(c)
-    moves = -1
+    length = len(c) - 1
+    moves = 0
     current_cloud = 0
     while True:
         #if current cloud is not end or the second to last step
-        if current_cloud < length-2:
+        if current_cloud < length-1:
             #only 1 short hop available
             if c[current_cloud+1] == 0 and c[current_cloud+2] != 0:
                 moves += 1
